@@ -1,7 +1,7 @@
 import { Service } from 'egg';
 
 /**
- * Image Service
+ * Test Service
  */
 export default class Image extends Service {
 
@@ -9,15 +9,14 @@ export default class Image extends Service {
    * componentImage to you
    * @param name - your name
    */
-  public async componentImage(name: string) {
+  public async componentImage(name: string, id: string) {
     return {
       fields: {
-        _id: 'x23121222321312',
-        name: '图片组件',
+        id: 'xxxasasaqwqwq-',
         src: {
-          label: "图片名称" + name,
+          label: "图片地址" + name,
           defaultValue: "http://resume.xonepage.com/img/xkh.63d61646.jpg",
-          type: "image",
+          type: "text",
           required: true,
           disable: false,
         },

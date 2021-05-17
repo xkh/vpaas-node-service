@@ -17,7 +17,7 @@ export default class Image extends Service {
         src: {
           label: "图片名称" + name,
           defaultValue: "http://resume.xonepage.com/img/xkh.63d61646.jpg",
-          type: "image",
+          type: "",
           required: true,
           disable: false,
         },
