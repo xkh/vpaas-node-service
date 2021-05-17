@@ -14,20 +14,32 @@ export default class Image extends Service {
       fields: {
         _id: 'x23121222321312',
         name: '图片组件',
-        src: {
-          label: "图片名称" + name,
-          defaultValue: "http://resume.xonepage.com/img/xkh.63d61646.jpg",
-          type: "image",
-          required: true,
-          disable: false,
-        },
-        link: {
-          label: "图片跳转地址" + name,
-          defaultValue: "https://github.com/xkh",
-          type: "text",
-          required: true,
-          disable: false,
-        }
+        images: [
+          {
+            src: {
+              label: "图片名称" + name,
+              disable: false,
+              default: "http://resume.xonepage.com/img/xkh.63d61646.jpg",
+              type: "image",
+              rules: {
+                required: true,
+                reg: "/\.(png|jpe?g|gif|svg)(\?.*)?$/",
+                msg: "请输入图片地址",
+              },
+            },
+            link: {
+              label: "图片跳转地址" + name,
+              disable: false,
+              default: "https://github.com/xkh",
+              type: "text",
+              rules: {
+                required: true,
+                reg: "/(http|https):\/\/([\w.]+\/?)\S*/",
+                msg: "地址格式错误",
+              },
+            }
+          }
+        ],
       }
     };
   }
