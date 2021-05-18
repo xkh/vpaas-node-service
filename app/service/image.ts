@@ -19,7 +19,7 @@ export default class Image extends Service {
             src: {
               label: "图片名称" + name,
               disable: false,
-              default: "http://resume.xonepage.com/img/xkh.63d61646.jpg",
+              default: "http://xonepage.com/assets/images/work-show-09.jpg",
               type: "image",
               rules: {
                 required: true,
